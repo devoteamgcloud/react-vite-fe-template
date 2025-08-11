@@ -23,11 +23,12 @@ const systemColors = {
   danger: '#C62828',
   success: '#2E7D32',
   warning: '#ED6C02',
+  info: '#0288D1',
 }
 
 const textColors = {
   primary: '#000000E5',
-  secondary: '#0000009E',
+  secondary: '#FFFFFF',
   disabled: '#0000006D',
   iconColor: '#3C4A63',
   black: neutrals.black,
@@ -54,6 +55,7 @@ const brandPalette = {
   danger: systemColors.danger,
   success: systemColors.success,
   warning: systemColors.warning,
+  info: systemColors.info,
 
   // Neutrals
   black: neutrals.black,
@@ -107,6 +109,7 @@ type ThemeConfig = {
     danger: string
     success: string
     warning: string
+    info: string
 
     black: string
     white: string

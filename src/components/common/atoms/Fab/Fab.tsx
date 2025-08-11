@@ -9,7 +9,7 @@ export type FabBgColor =
   | 'success'
   | 'warning'
   | 'info'
-export type FabTextColor = 'primary' | 'secondary' | 'white'
+export type FabTextColor = 'primary' | 'secondary'
 export type Fabsize = 'small' | 'medium' | 'large'
 
 type Props = {
@@ -28,7 +28,7 @@ type Props = {
 const Fab: FC<Props> = ({
   onClick,
   bgColor = 'primary',
-  textColor = 'white',
+  textColor = 'secondary',
   size = 'medium',
   ...positioning
 }) => {

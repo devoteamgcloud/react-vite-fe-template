@@ -65,9 +65,9 @@ const size = {
 }
 
 const fabSize = {
-  SMALL: 40,
-  MEDIUM: 56,
-  LARGE: 72,
+  small: 40,
+  medium: 56,
+  large: 72,
 }
 
 const tokens = {

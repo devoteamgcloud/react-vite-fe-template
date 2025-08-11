@@ -1,9 +1,15 @@
 import './App.css'
+import Fab from './components/common/atoms/Fab'
 import { Typography } from './core/typography'
 
 function App() {
   return (
     <>
+      <Fab
+        onClick={function (): void {
+          throw new Error('Function not implemented.')
+        }}
+      />
       <Typography.Heading3 style={{ margin: '20px' }}>
         Welcome to React Vite Template
       </Typography.Heading3>
