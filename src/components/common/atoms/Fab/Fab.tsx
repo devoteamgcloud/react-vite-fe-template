@@ -8,6 +8,7 @@ export type FabBgColor =
   | 'danger'
   | 'success'
   | 'warning'
+  | 'info'
 export type FabTextColor = 'primary' | 'secondary' | 'white'
 export type Fabsize = 'SMALL' | 'MEDIUM' | 'LARGE'
 
