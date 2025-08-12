@@ -1,184 +1,187 @@
 const neutrals = {
-    black: '#0F0F0F',
-    blackOpacity: '#00000010',
-    grayOpacity: '#D1D5DBB3',
-    white: '#FFFFFF',
-    whiteOpacity: '#FFFFFFE6',
+  black: '#0F0F0F',
+  blackOpacity: '#00000010',
+  grayOpacity: '#D1D5DBB3',
+  white: '#FFFFFF',
+  whiteOpacity: '#FFFFFFE6',
 }
 
 const brandColors = {
-    primary: '#',
-    secondary: '#',
-    tertiary: '#'
+  primary: '#f8485e',
+  secondary: '#3c3c3a',
+  tertiary: '#fca2ae',
 }
 
 const background = {
-    primaryGrey: '#EFEFE9',
-    secondaryGrey: '#F5F5F5',
-    tertiaryGrey: '#CCCCCC',
+  primaryGrey: '#EFEFE9',
+  secondaryGrey: '#F5F5F5',
+  tertiaryGrey: '#CCCCCC',
 }
 
 const systemColors = {
-    error: '#',
-    danger: '#',
-    success: '#',
-    warning: '#',
+  error: '#D32F2F',
+  danger: '#C62828',
+  success: '#2E7D32',
+  warning: '#ED6C02',
+  info: '#0288D1',
 }
 
 const textColors = {
-    primary: '#000000E5',
-    secondary: '#0000009E',
-    disabled: '#0000006D',
-    iconColor: '#3C4A63',
-    black: neutrals.black,
+  primary: '#000000E5',
+  secondary: '#FFFFFF',
+  disabled: '#0000006D',
+  iconColor: '#3C4A63',
+  black: neutrals.black,
+  white: neutrals.white,
 }
 
 const hover = {
-    primaryGrey: '#EFEFE966',
+  primaryGrey: '#EFEFE966',
 }
 
-
 const brandPalette = {
-    // Primary
-    primary: brandColors.primary,
-    secondary: brandColors.secondary,
-    tertiary: brandColors.tertiary,
+  // Primary
+  primary: brandColors.primary,
+  secondary: brandColors.secondary,
+  tertiary: brandColors.tertiary,
 
-    // Background
-    primaryBackground: background.primaryGrey,
-    secondaryBackground: background.secondaryGrey,
-    tertiaryBackground: background.tertiaryGrey,
+  // Background
+  primaryBackground: background.primaryGrey,
+  secondaryBackground: background.secondaryGrey,
+  tertiaryBackground: background.tertiaryGrey,
 
-    // System colors
-    error: systemColors.error,
-    danger: systemColors.danger,
-    success: systemColors.success,
-    warning: systemColors.warning,
+  // System colors
+  error: systemColors.error,
+  danger: systemColors.danger,
+  success: systemColors.success,
+  warning: systemColors.warning,
+  info: systemColors.info,
 
-    // Neutrals
-    black: neutrals.black,
-    white: neutrals.white,
-    boxShadow: neutrals.blackOpacity,
-    scrollBar: neutrals.grayOpacity,
+  // Neutrals
+  black: neutrals.black,
+  white: neutrals.white,
+  boxShadow: neutrals.blackOpacity,
+  scrollBar: neutrals.grayOpacity,
 
-    // Text
-    text: {
-        primary: textColors.primary,
-        secondary: textColors.secondary,
-        disabled: textColors.disabled,
-        iconColor: textColors.iconColor,
-        black: textColors.black,
-    },
-   
+  // Text
+  text: {
+    primary: textColors.primary,
+    secondary: textColors.secondary,
+    disabled: textColors.disabled,
+    iconColor: textColors.iconColor,
+    black: textColors.black,
+    white: textColors.white,
+  },
 
-    // Hover
-    hoverPrimaryBackground: hover.primaryGrey,
-    hoverIconDisabled: background.tertiaryGrey,
+  // Hover
+  hoverPrimaryBackground: hover.primaryGrey,
+  hoverIconDisabled: background.tertiaryGrey,
 
-    // Buttons
-    primaryButton: brandColors.primary,
+  // Buttons
+  primaryButton: brandColors.primary,
 }
 
 type ButtonVariantStyle = {
-    background: string
-    text: string
-    hover: string
-    border: string
+  background: string
+  text: string
+  hover: string
+  border: string
 }
 
 type ButtonStyles = {
- 
-    [key: string]: {
-        filled: ButtonVariantStyle
-        outlined: ButtonVariantStyle
-    }
+  [key: string]: {
+    filled: ButtonVariantStyle
+    outlined: ButtonVariantStyle
+  }
 }
 
 type ThemeConfig = {
-    colors: {
-        primary: string
-        secondary: string
-        tertiary: string
+  colors: {
+    primary: string
+    secondary: string
+    tertiary: string
 
-        primaryBackground: string
-        secondaryBackground: string
-        tertiaryBackground: string
+    primaryBackground: string
+    secondaryBackground: string
+    tertiaryBackground: string
 
-        error: string
-        danger: string
-        success: string
-        warning: string
+    error: string
+    danger: string
+    success: string
+    warning: string
+    info: string
 
-        black: string
-        white: string
+    black: string
+    white: string
 
-        boxShadow: string
-        scrollBar: string
+    boxShadow: string
+    scrollBar: string
 
-        text: {
-            primary: string
-            secondary: string
-            disabled: string
-            iconColor: string
-        }
-
+    text: {
+      primary: string
+      secondary: string
+      disabled: string
+      iconColor: string
+      white: string
     }
-    typography: {
-        fontFamily?: string
-        fontSize?: number
-    }
-    buttonStyles: ButtonStyles
+  }
+  typography: {
+    fontFamily?: string
+    fontSize?: number
+  }
+  buttonStyles: ButtonStyles
 }
 
 const light: ThemeConfig = {
-    colors: {
-        ...brandPalette,
-        
+  colors: {
+    ...brandPalette,
+  },
+  typography: {
+    fontFamily: 'Inter, sans-serif',
+    fontSize: 16,
+  },
+  buttonStyles: {
+    primary: {
+      filled: {
+        background: brandPalette.primaryButton,
+        text: brandPalette.white,
+        border: 'none',
+        hover: brandPalette.primaryButton,
+      },
+      outlined: {
+        background: 'transparent',
+        text: brandPalette.primaryButton,
+        border: `inset 0 0 0 1px ${brandPalette.primaryButton}`,
+        hover: brandPalette.primaryButton,
+      },
     },
-    typography: {
-        fontFamily: 'Inter, sans-serif',
-        fontSize: 16,
+    danger: {
+      filled: {
+        text: brandPalette.white,
+        border: 'none',
+        background: brandPalette.danger,
+        hover: brandPalette.danger,
+      },
+      outlined: {
+        background: 'transparent',
+        text: brandPalette.danger,
+        border: `inset 0 0 0 1px ${brandPalette.danger}`,
+        hover: brandPalette.danger,
+      },
     },
-    buttonStyles: {
-        primary: {
-            filled: {
-                background: brandPalette.primaryButton,
-                text: brandPalette.white,
-                border: 'none',
-                hover: brandPalette.primaryButton,
-            },
-            outlined: {
-                background: 'transparent',
-                text: brandPalette.primaryButton,
-                border: `inset 0 0 0 1px ${brandPalette.primaryButton}`,
-                hover: brandPalette.primaryButton,
-            },
-        },
-        danger: {
-            filled: {
-                text: brandPalette.white,
-                border: 'none',
-                background: brandPalette.danger,
-                hover: brandPalette.danger,
-            },
-            outlined: {
-                background: 'transparent',
-                text: brandPalette.danger,
-                border: `inset 0 0 0 1px ${brandPalette.danger}`,
-                hover: brandPalette.danger,
-            },
-        },
-    },
+  },
 }
 
 export const themes = {
-    light,
+  light,
 }
 
 declare module '@emotion/react' {
-    export interface Theme {
-        colors: ThemeConfig['colors']
-        typography: ThemeConfig['typography']
-        buttonStyles: ThemeConfig['buttonStyles']
-    } 
+  export interface Theme {
+    colors: ThemeConfig['colors']
+    typography: ThemeConfig['typography']
+    buttonStyles: ThemeConfig['buttonStyles']
+  }
 }
+
+export default themes.light
