@@ -25,8 +25,20 @@ export const Header = styled.header`
     flex-direction: column;
     gap: ${tokens.size.BASELINE}px;
   }
+
+  @media (max-width: ${tokens.breakpoints.phone}) {
+    padding: ${tokens.padding.BASELINE * 2}px;
+
+    & > div {
+      gap: ${tokens.size.BASELINE / 2}px;
+    }
+  }
 `
 
 export const Main = styled.main`
   padding: ${tokens.padding.CONTAINER}px;
+
+  @media (max-width: ${tokens.breakpoints.phone}) {
+    padding: ${tokens.padding.BASELINE * 2}px;
+  }
 `
