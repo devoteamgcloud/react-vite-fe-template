@@ -1,21 +1,12 @@
+// App.tsx
+import { Outlet } from 'react-router-dom'
+import BaseLayout from './components/layout/BaseLayout'
 
-import './App.css'
-import { Typography } from './core/typography'
-
-function App() {
-
-
+export default function App() {
   return (
-    <>
-     <Typography.Heading3 style={{ margin: '20px' }}>
-        Welcome to React Vite Template
-      </Typography.Heading3>
-      <Typography.BodyBase style={{ margin: '20px' }}>
-        This is a simple template to get you started with React and Vite.
-      </Typography.BodyBase>
-     
-    </>
+    <BaseLayout /*actions={<button type="button">Dark</button>}*/>
+      {/* child pages will render here later */}
+      <Outlet />
+    </BaseLayout>
   )
 }
-
-export default App
