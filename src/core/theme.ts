@@ -137,7 +137,7 @@ const light: ThemeConfig = {
     ...brandPalette,
   },
   typography: {
-    fontFamily: 'Inter, sans-serif',
+    fontFamily: "'Montserrat', Inter, sans-serif",
     fontSize: 16,
   },
   buttonStyles: {

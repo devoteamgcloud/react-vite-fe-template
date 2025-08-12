@@ -11,9 +11,14 @@ createRoot(document.getElementById('root')!).render(
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          {/* TODO: Add more routes that takes you to different template pages */}
-          <Route path="/" element={<App />} />
-          <Route path="/about" element={<div>About Page</div>} />
+          <Route element={<App />}>
+            {/* 
+            <Route index element={<OverviewPage />} />
+            <Route path="components" element={<ComponentsPage />} />
+            <Route path="hooks" element={<HooksPage />} />
+            */}
+            <Route index element={<div />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
