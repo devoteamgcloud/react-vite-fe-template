@@ -1,4 +1,3 @@
-import type { FC } from 'react'
 import * as S from './styled'
 import { MdAdd } from 'react-icons/md'
 
@@ -10,35 +9,35 @@ export type FabBgColor =
   | 'warning'
   | 'info'
 export type FabTextColor = 'primary' | 'secondary'
-export type Fabsize = 'small' | 'medium' | 'large'
+export type Fabsize = 'sm' | 'md' | 'lg'
+export type FabPlacement =
+  | 'bottom-right'
+  | 'bottom-left'
+  | 'top-right'
+  | 'top-left'
 
 type Props = {
   onClick: () => void
   bgColor?: FabBgColor
   textColor?: FabTextColor
   size?: Fabsize
-  position?: 'absolute' | 'fixed' | 'relative'
-  bottom?: number
-  right?: number
-  top?: number
-  left?: number
-  zIndex?: number
+  placement?: FabPlacement
 }
 
-const Fab: FC<Props> = ({
+function Fab({
   onClick,
   bgColor = 'primary',
   textColor = 'secondary',
-  size = 'medium',
-  ...positioning
-}) => {
+  size = 'md',
+  placement = 'top-left',
+}: Props) {
   return (
     <S.Container
       onClick={onClick}
-      bgColor={bgColor}
-      textColor={textColor}
-      size={size}
-      {...positioning}
+      $bgColor={bgColor}
+      $textColor={textColor}
+      $size={size}
+      $placement={placement}
       aria-label="Floating Action Button"
     >
       <MdAdd />
