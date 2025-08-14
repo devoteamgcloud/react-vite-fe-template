@@ -1,7 +1,12 @@
 import { useEffect, useMemo, useState } from 'react'
 import * as S from './styled'
 
-type TabItem = { key: string; label: string; content: React.ReactNode }
+export type TabItem = {
+  key: string
+  label: string
+  content: React.ReactNode
+}
+
 type Props = { items: TabItem[]; defaultKey?: string }
 
 export default function Tabs({ items, defaultKey }: Props) {
