@@ -13,7 +13,6 @@ createRoot(document.getElementById('root')!).render(
         <Routes>
           //TODO: Add more routes that takes you to different template pages
           <Route path="/" element={<App />} />
-          <Route path="/about" element={<div>About Page</div>} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
