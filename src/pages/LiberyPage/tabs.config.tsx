@@ -1,4 +1,3 @@
-// src/pages/LibraryPage/tabs.config.tsx
 import type { TabItem } from '../../components/common/organisms/Tabs'
 import OverviewTab from './tabs/Overview'
 import ComponentsTab from './tabs/Components'

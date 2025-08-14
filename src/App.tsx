@@ -1,4 +1,3 @@
-// src/App.tsx (optional)
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LibraryPage from './pages/LiberyPage'
 
