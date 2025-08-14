@@ -1,4 +1,3 @@
-// src/pages/LibraryPage/index.tsx
 import { Typography as T } from '../../core/typography'
 import Tabs from '../../components/common/organisms/Tabs'
 import { Main } from '../../components/common/styled'
