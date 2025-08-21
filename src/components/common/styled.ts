@@ -12,3 +12,7 @@ export const DividerBar = styled.hr`
   border-top: ${tokens.size.BASELINE / 8}px solid
     ${({ theme }) => theme.colors.scrollBar};
 `
+
+export const BaseContainer = styled.div`
+  padding: ${tokens.padding.BASELINE * 2.5}px;
+`
