@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import tokens from '../../core/tokens'
 
-export const Main = styled.nav`
+export const Main = styled.main`
   padding: ${tokens.padding.BASELINE * 2}px;
 `
 
