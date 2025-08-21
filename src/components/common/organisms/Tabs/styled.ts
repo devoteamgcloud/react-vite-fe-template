@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import tokens from '../../../../core/tokens'
 
-const DIVIDER_W = `${tokens.size.BASELINE / 8}px` // ~1px
+const DIVIDER_W = `${tokens.size.BASELINE / 8}px`
 const INDICATOR_H = '2px'
 
 export const Bar = styled.nav`

@@ -57,6 +57,7 @@ export default function Tabs({ items, defaultKey }: Props) {
             id={`${t.key}-panel`}
             aria-labelledby={`${t.key}-tab`}
             hidden={!isActive}
+            aria-hidden={!isActive}
           >
             {isActive && t.content}
           </S.Panel>
