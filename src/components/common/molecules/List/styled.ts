@@ -1,8 +1,5 @@
 import styled from '@emotion/styled'
 import tokens from '../../../../core/tokens'
-import { FlexContainer } from '../../styled'
-
-export const ListWrapper = styled(FlexContainer)``
 
 export const List = styled.ul`
   margin: ${tokens.spacing.BASELINE}px 0;
