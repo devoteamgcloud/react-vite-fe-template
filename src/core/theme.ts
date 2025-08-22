@@ -13,7 +13,7 @@ const brandColors = {
 }
 
 const background = {
-  primaryGrey: '#f4f4f4',
+  primaryGrey: '#EFEFE9',
   secondaryGrey: '#F5F5F5',
   tertiaryGrey: '#CCCCCC',
 }

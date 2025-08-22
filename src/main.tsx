@@ -1,18 +1,17 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
-import { BrowserRouter, Route, Routes } from 'react-router'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from '@emotion/react'
-import theme from './core/theme.ts'
+import theme from './core/theme'
+import './index.css'
+import LibraryPage from './pages/LiberyPage'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          //TODO: Add more routes that takes you to different template pages
-          <Route path="/" element={<App />} />
+          <Route index element={<LibraryPage />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
