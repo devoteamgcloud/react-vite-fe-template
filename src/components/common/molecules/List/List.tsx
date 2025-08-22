@@ -1,4 +1,5 @@
 import { Typography as T } from '../../../../core/typography'
+import { FlexContainer } from '../../styled'
 import * as S from './styled'
 
 type ListProps = {
@@ -8,7 +9,7 @@ type ListProps = {
 
 export default function List({ title, items }: ListProps) {
   return (
-    <S.ListWrapper>
+    <FlexContainer>
       <T.BodyBase demi margin="0">
         {title}
       </T.BodyBase>
@@ -17,6 +18,6 @@ export default function List({ title, items }: ListProps) {
           <S.ListItem key={item}>{item}</S.ListItem>
         ))}
       </S.List>
-    </S.ListWrapper>
+    </FlexContainer>
   )
 }

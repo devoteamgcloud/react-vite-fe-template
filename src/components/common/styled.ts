@@ -1,9 +1,11 @@
 import styled from '@emotion/styled'
 import tokens from '../../core/tokens'
 
-export const Main = styled.main`
-  padding: ${tokens.padding.BASELINE * 2}px;
+export const PaddedContainer = styled.div<{ padding?: number }>`
+  padding: ${(p) => p.padding ?? tokens.padding.BASELINE * 2}px;
 `
+
+export const Main = styled(PaddedContainer)``
 
 export const DividerBar = styled.hr`
   width: 100%;
@@ -13,15 +15,15 @@ export const DividerBar = styled.hr`
     ${({ theme }) => theme.colors.scrollBar};
 `
 
-export const BaseContainer = styled.div`
-  padding: ${tokens.padding.BASELINE * 2.5}px;
-`
-export const FlexContainer = styled.div`
+export const FlexContainer = styled.div<{
+  direction?: 'row' | 'column'
+  gap?: number
+  align?: string
+  justify?: string
+}>`
   display: flex;
-  flex-direction: column;
-  gap: ${tokens.gap.BASELINE}px;
-`
-
-export const TabContainer = styled(FlexContainer)`
-  gap: ${tokens.gap.BASELINE * 2.5}px;
+  flex-direction: ${(p) => p.direction ?? 'column'};
+  gap: ${(p) => p.gap ?? tokens.gap.BASELINE}px;
+  align-items: ${(p) => p.align ?? 'stretch'};
+  justify-content: ${(p) => p.justify ?? 'flex-start'};
 `
