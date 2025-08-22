@@ -16,3 +16,12 @@ export const DividerBar = styled.hr`
 export const BaseContainer = styled.div`
   padding: ${tokens.padding.BASELINE * 2.5}px;
 `
+export const FlexContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: ${tokens.gap.BASELINE}px;
+`
+
+export const TabContainer = styled(FlexContainer)`
+  gap: ${tokens.gap.BASELINE * 2.5}px;
+`
