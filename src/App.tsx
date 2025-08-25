@@ -1,14 +1,12 @@
-import { Typography } from './core/typography'
+import Header from './components/common/Layout/Header'
 
 function App() {
   return (
     <>
-      <Typography.Heading3 style={{ margin: '20px' }}>
-        Welcome to React Vite Template
-      </Typography.Heading3>
-      <Typography.BodyBase style={{ margin: '20px' }}>
-        This is a simple template to get you started with React and Vite.
-      </Typography.BodyBase>
+      <Header
+        title="React-Vite Template"
+        subtitle="Explore reusable components, hooks, and patterns"
+      />
     </>
   )
 }
