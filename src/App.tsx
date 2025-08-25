@@ -1,15 +1,13 @@
-import { Typography } from './core/typography'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import LibraryPage from './pages/LiberyPage'
 
 function App() {
   return (
-    <>
-      <Typography.Heading3 style={{ margin: '20px' }}>
-        Welcome to React Vite Template
-      </Typography.Heading3>
-      <Typography.BodyBase style={{ margin: '20px' }}>
-        This is a simple template to get you started with React and Vite.
-      </Typography.BodyBase>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<LibraryPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
