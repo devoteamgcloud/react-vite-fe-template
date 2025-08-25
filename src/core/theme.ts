@@ -1,9 +1,9 @@
 const neutrals = {
   black: '#0F0F0F',
   blackOpacity: '#00000010',
-  grayOpacity: '#D1D5DBB3',
+  grayOpacity: '#D1D5DBD9',
   white: '#FFFFFF',
-  whiteOpacity: '#FFFFFFE6',
+  whiteOpacity: '#FFFFFFD9',
 }
 
 const brandColors = {
@@ -21,9 +21,9 @@ const background = {
 const systemColors = {
   error: '#D32F2F',
   danger: '#C62828',
-  success: '#2E7D32',
-  warning: '#ED6C02',
-  info: '#0288D1',
+  success: '#10B981',
+  warning: '#FACC15',
+  info: '#0EA5E9',
 }
 
 const textColors = {
@@ -84,14 +84,14 @@ const brandPalette = {
 type ButtonVariantStyle = {
   background: string
   text: string
-  hover: string
+  hover?: { background: string; text: string }
   border: string
 }
 
 type ButtonStyles = {
   [key: string]: {
     filled: ButtonVariantStyle
-    outlined: ButtonVariantStyle
+    outlined?: ButtonVariantStyle
   }
 }
 
@@ -146,27 +146,72 @@ const light: ThemeConfig = {
         background: brandPalette.primaryButton,
         text: brandPalette.white,
         border: 'none',
-        hover: brandPalette.primaryButton,
+        hover: {
+          background: `${brandPalette.primaryButton}D9`,
+          text: brandPalette.white,
+        },
       },
       outlined: {
         background: 'transparent',
         text: brandPalette.primaryButton,
-        border: `inset 0 0 0 1px ${brandPalette.primaryButton}`,
-        hover: brandPalette.primaryButton,
+        border: `inset 0 0 0 2px ${brandPalette.primaryButton}`,
+        hover: {
+          background: brandPalette.primaryButton,
+          text: brandPalette.white,
+        },
+      },
+    },
+    secondary: {
+      filled: {
+        background: brandPalette.primaryBackground,
+        text: brandPalette.text.primary,
+        border: 'none',
+        hover: {
+          background: `${brandPalette.secondary}D9`,
+          text: brandPalette.white,
+        },
+      },
+      outlined: {
+        background: 'transparent',
+        text: brandPalette.secondary,
+        border: `inset 0 0 0 1px ${brandPalette.secondary}`,
+        hover: {
+          background: brandPalette.secondary,
+          text: brandPalette.white,
+        },
       },
     },
     danger: {
       filled: {
+        background: brandPalette.danger,
         text: brandPalette.white,
         border: 'none',
-        background: brandPalette.danger,
-        hover: brandPalette.danger,
+        hover: {
+          background: `${brandPalette.danger}D9`,
+          text: brandPalette.white,
+        },
       },
-      outlined: {
-        background: 'transparent',
-        text: brandPalette.danger,
-        border: `inset 0 0 0 1px ${brandPalette.danger}`,
-        hover: brandPalette.danger,
+    },
+    success: {
+      filled: {
+        background: brandPalette.success,
+        text: brandPalette.white,
+        border: 'none',
+        hover: {
+          background: `${brandPalette.success}D9`,
+          text: brandPalette.white,
+        },
+      },
+    },
+    info: {
+      filled: {
+        background: brandPalette.info,
+        text: brandPalette.white,
+        border: 'none',
+        hover: {
+          background: `${brandPalette.info}D9`,
+          text: brandPalette.white,
+        },
       },
     },
   },

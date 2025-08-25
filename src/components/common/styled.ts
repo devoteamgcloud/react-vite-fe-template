@@ -22,6 +22,7 @@ export const FlexContainer = styled.div<{
   justify?: string
 }>`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: ${(p) => p.direction ?? 'column'};
   gap: ${(p) => p.gap ?? tokens.gap.BASELINE}px;
   align-items: ${(p) => p.align ?? 'stretch'};
