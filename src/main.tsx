@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { ThemeProvider } from '@emotion/react'
 import theme from './core/theme'
 import './index.css'
-import LibraryPage from './pages/LiberyPage'
+import LibraryPage from './pages/LiberyPage/LiberyPage'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

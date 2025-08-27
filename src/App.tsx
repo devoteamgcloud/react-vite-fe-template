@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import LibraryPage from './pages/LiberyPage'
+import LibraryPage from './pages/LiberyPage/LiberyPage'
 
 function App() {
   return (
