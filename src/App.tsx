@@ -1,13 +1,11 @@
-import Header from './components/common/Layout/Header'
+import { Routes, Route } from 'react-router-dom'
+import LibraryPage from './pages/LiberyPage'
 
 function App() {
   return (
-    <>
-      <Header
-        title="React-Vite Template"
-        subtitle="Explore reusable components, hooks, and patterns"
-      />
-    </>
+    <Routes>
+      <Route index element={<LibraryPage />} />
+    </Routes>
   )
 }
 
