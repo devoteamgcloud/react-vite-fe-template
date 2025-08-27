@@ -1,7 +1,7 @@
 import { Typography as T } from '../../core/typography'
 import Tabs from '../../components/common/organisms/Tabs'
 import { Main } from '../../components/common/styled'
-import { LIBRARY_TABS } from './tabs.config'
+import { LiberyTabs } from './tabs.config'
 
 export default function LibraryPage() {
   return (
@@ -14,7 +14,7 @@ export default function LibraryPage() {
       </T.BodyBase>
 
       <Main>
-        <Tabs items={LIBRARY_TABS} defaultKey="overview" />
+        <Tabs items={LiberyTabs} defaultKey="overview" />
       </Main>
     </>
   )

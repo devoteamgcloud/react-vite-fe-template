@@ -3,7 +3,7 @@ import { FlexContainer } from '../../../../components/common/styled'
 import SectionCard from '../../../../components/common/templates/SectionCard'
 import tokens from '../../../../core/tokens'
 import { Typography as T } from '../../../../core/typography'
-import { overviewSections } from './overview.config'
+import { overviewSections } from './overview'
 
 export default function OverviewTab() {
   return (
