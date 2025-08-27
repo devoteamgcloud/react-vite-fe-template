@@ -39,7 +39,7 @@ const shouldForwardProp = (prop: string) =>
     'margin',
   ].includes(prop)
 
-const TextBaseComponent = styled('p', { shouldForwardProp })<TypographyProps>``
+const TextBaseComponent = styled('p', { shouldForwardProp }) <TypographyProps>``
 
 export const textProps = (props: TypographyProps) => css`
   ${props.uppercase && 'text-transform: uppercase;'}
@@ -123,6 +123,28 @@ const Heading3 = styled(TextBaseComponent)`
   @media (max-width: ${tokens.breakpoints.phone}) {
     font-size: ${tokens.text.fontSize.MEDIUM}px;
 `
+const Paragraph1 = styled(TextBaseComponent)`
+    font-size: ${tokens.text.fontSize.SMALL}px;
+  ${textProps}
+
+  @media (max-width: ${tokens.breakpoints.tablet}) {
+    font-size: ${tokens.text.fontSize.SMALL}px;
+  }
+
+  @media (max-width: ${tokens.breakpoints.phone}) {
+    font-size: ${tokens.text.fontSize.SMALL - 6}px;
+`
+const Paragraph2 = styled(TextBaseComponent)`
+    font-size: ${tokens.text.fontSize.SMALL + 2}px;
+  ${textProps}
+
+  @media (max-width: ${tokens.breakpoints.tablet}) {
+    font-size: ${tokens.text.fontSize.SMALL}px;
+  }
+
+  @media (max-width: ${tokens.breakpoints.phone}) {
+    font-size: ${tokens.text.fontSize.SMALL - 6}px;
+`
 
 export const Typography = {
   BodyLarge,
@@ -133,4 +155,6 @@ export const Typography = {
   Heading1,
   Heading2,
   Heading3,
+  Paragraph1,
+  Paragraph2
 }

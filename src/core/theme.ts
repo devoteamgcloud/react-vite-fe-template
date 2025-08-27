@@ -130,6 +130,7 @@ type ThemeConfig = {
     fontSize?: number
   }
   buttonStyles: ButtonStyles
+  colorScheme: string
 }
 
 const light: ThemeConfig = {
@@ -215,10 +216,99 @@ const light: ThemeConfig = {
       },
     },
   },
+  colorScheme: 'light',
+}
+
+
+//! Needs styling
+const dark: ThemeConfig = {
+  colors: {
+    ...brandPalette,
+  },
+  typography: {
+    fontFamily: "'Montserrat', Inter, sans-serif",
+    fontSize: 16,
+  },
+  buttonStyles: {
+    primary: {
+      filled: {
+        background: brandPalette.primaryButton,
+        text: brandPalette.white,
+        border: 'none',
+        hover: {
+          background: `${brandPalette.primaryButton}D9`,
+          text: brandPalette.white,
+        },
+      },
+      outlined: {
+        background: 'transparent',
+        text: brandPalette.primaryButton,
+        border: `inset 0 0 0 2px ${brandPalette.primaryButton}`,
+        hover: {
+          background: brandPalette.primaryButton,
+          text: brandPalette.white,
+        },
+      },
+    },
+    secondary: {
+      filled: {
+        background: brandPalette.primaryBackground,
+        text: brandPalette.text.primary,
+        border: 'none',
+        hover: {
+          background: `${brandPalette.secondary}D9`,
+          text: brandPalette.white,
+        },
+      },
+      outlined: {
+        background: 'transparent',
+        text: brandPalette.secondary,
+        border: `inset 0 0 0 1px ${brandPalette.secondary}`,
+        hover: {
+          background: brandPalette.secondary,
+          text: brandPalette.white,
+        },
+      },
+    },
+    danger: {
+      filled: {
+        background: brandPalette.danger,
+        text: brandPalette.white,
+        border: 'none',
+        hover: {
+          background: `${brandPalette.danger}D9`,
+          text: brandPalette.white,
+        },
+      },
+    },
+    success: {
+      filled: {
+        background: brandPalette.success,
+        text: brandPalette.white,
+        border: 'none',
+        hover: {
+          background: `${brandPalette.success}D9`,
+          text: brandPalette.white,
+        },
+      },
+    },
+    info: {
+      filled: {
+        background: brandPalette.info,
+        text: brandPalette.white,
+        border: 'none',
+        hover: {
+          background: `${brandPalette.info}D9`,
+          text: brandPalette.white,
+        },
+      },
+    },
+  },
+  colorScheme: 'dark',
 }
 
 export const themes = {
-  light,
+  light, dark
 }
 
 declare module '@emotion/react' {
@@ -226,6 +316,7 @@ declare module '@emotion/react' {
     colors: ThemeConfig['colors']
     typography: ThemeConfig['typography']
     buttonStyles: ThemeConfig['buttonStyles']
+    colorScheme: ThemeConfig['colorScheme']
   }
 }
 
