@@ -1,17 +1,15 @@
-import { Typography as T } from '../../core/typography'
 import Tabs from '../../components/common/organisms/Tabs'
 import { Main } from '../../components/common/styled'
 import { LiberyTabs } from './tabs.config'
+import Header from '../../components/common/Layout/Header'
 
 export default function LibraryPage() {
   return (
     <>
-      <T.Heading3 style={{ margin: 20 }}>
-        Welcome to React Vite Template
-      </T.Heading3>
-      <T.BodyBase style={{ margin: 20 }}>
-        This is a simple template to get you started with React and Vite.
-      </T.BodyBase>
+      <Header
+        title="React-Vite Template"
+        subtitle="Explore reusable components, hooks, and patterns"
+      />
 
       <Main>
         <Tabs items={LiberyTabs} defaultKey="overview" />
