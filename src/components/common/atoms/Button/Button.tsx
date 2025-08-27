@@ -1,4 +1,3 @@
-import tokens from '../../../../core/tokens'
 import { Typography } from '../../../../core/typography'
 import * as S from './styled'
 
@@ -13,9 +12,12 @@ type Props = {
   onClick: () => void
   text: string
   color?: ButtonColor
-  width?: 'fit-content' | '100%'
+  /** fixed width in px */
+  width?: number
+  /** fill parent container */
+  fullWidth?: boolean
   variant?: 'filled' | 'outlined'
-  edgy?: boolean
+  rounded?: boolean
   size?: 'small' | 'medium' | 'large'
 }
 
@@ -23,9 +25,10 @@ const Button: React.FC<Props> = ({
   onClick,
   text,
   color = 'primary',
-  width = 'fit-content',
+  width,
+  fullWidth = false,
   variant = 'filled',
-  edgy = false,
+  rounded = false,
   size = 'medium',
 }) => {
   return (
@@ -33,13 +36,12 @@ const Button: React.FC<Props> = ({
       onClick={onClick}
       color={color}
       width={width}
+      fullWidth={fullWidth}
       variant={variant}
-      edgy={edgy}
+      rounded={rounded}
       size={size}
     >
-      <Typography.BodyBase style={{ margin: tokens.margin.ZERO }}>
-        {text}
-      </Typography.BodyBase>
+      <Typography.BodyBase>{text}</Typography.BodyBase>
     </S.ButtonContainer>
   )
 }

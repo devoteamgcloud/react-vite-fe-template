@@ -159,8 +159,8 @@ const light: ThemeConfig = {
     },
     secondary: {
       filled: {
-        background: brandPalette.primaryBackground,
-        text: brandPalette.text.primary,
+        background: brandPalette.secondary,
+        text: brandPalette.text.white,
         border: 'none',
       },
       outlined: {

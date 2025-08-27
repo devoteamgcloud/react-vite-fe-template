@@ -10,14 +10,16 @@ const sizePadding = {
 
 export const ButtonContainer = styled.button<{
   color: ButtonColor
-  width?: string
+  width?: number
+  fullWidth?: boolean
   variant: 'filled' | 'outlined'
-  edgy?: boolean
+  rounded?: boolean
   fontWeight?: string
   size?: 'small' | 'medium' | 'large'
 }>`
-  width: ${({ width }) => (width === '100%' ? 'auto' : width ?? 'fit-content')};
-  flex: ${({ width }) => (width === '100%' ? '1 1 auto' : '0 0 auto')};
+  width: ${({ fullWidth, width }) =>
+    fullWidth ? '100%' : width ? `${width}px` : 'auto'};
+  flex: ${({ fullWidth }) => (fullWidth ? '1 1 auto' : '0 0 auto')};
   min-width: 90px;
 
   display: flex;
@@ -25,8 +27,8 @@ export const ButtonContainer = styled.button<{
   align-items: center;
   font-weight: ${({ fontWeight }) => fontWeight ?? '600'};
   border: none;
-  border-radius: ${({ edgy }) =>
-    edgy ? tokens.borderRadius.ZERO : tokens.borderRadius.ROUND}px;
+  border-radius: ${({ rounded }) =>
+    rounded ? tokens.borderRadius.ROUND : tokens.borderRadius.BASELINE}px;
   padding: ${({ size }) => sizePadding[size ?? 'medium']};
   box-sizing: border-box;
   overflow: hidden;
@@ -35,10 +37,9 @@ export const ButtonContainer = styled.button<{
 
   ${({ variant, color, theme }) => {
     const style = theme.buttonStyles[color]?.[variant]
-
     if (!style) {
       return `
-        background: gray; /* fallback */
+        background: gray;
         color: white;
         border: none;
       `
