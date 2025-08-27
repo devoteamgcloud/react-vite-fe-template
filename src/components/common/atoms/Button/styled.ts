@@ -17,9 +17,8 @@ export const ButtonContainer = styled.button<{
   fontWeight?: string
   size?: 'small' | 'medium' | 'large'
 }>`
-  width: ${({ fullWidth, width }) =>
-    fullWidth ? '100%' : width ? `${width}px` : 'auto'};
-  flex: ${({ fullWidth }) => (fullWidth ? '1 1 auto' : '0 0 auto')};
+  width: ${({ width }) => (width ? `${width}px` : 'auto')};
+  flex: ${({ fullWidth }) => (fullWidth ? '1' : '0 0 auto')};
   min-width: 90px;
 
   display: flex;
