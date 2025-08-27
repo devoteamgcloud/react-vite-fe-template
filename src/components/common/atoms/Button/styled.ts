@@ -8,6 +8,8 @@ const sizePadding = {
   large: `${tokens.padding.BASELINE * 2.5}px ${tokens.padding.BASELINE * 4}px`,
 }
 
+const sizeMinWidth = { small: 90, medium: 120, large: 160 }
+
 export const ButtonContainer = styled.button<{
   color: ButtonColor
   width?: number
@@ -18,19 +20,26 @@ export const ButtonContainer = styled.button<{
   size?: 'small' | 'medium' | 'large'
 }>`
   width: ${({ width }) => (width ? `${width}px` : 'auto')};
-  flex: ${({ fullWidth }) => (fullWidth ? '1' : '0 0 auto')};
-  min-width: 90px;
 
-  display: flex;
+  ${({ fullWidth, size = 'medium' }) =>
+    fullWidth ? `flex: 1 0 ${sizeMinWidth[size]}px;` : `flex: 0 0 auto;`};
+
+  min-width: ${({ size = 'medium' }) => `${sizeMinWidth[size]}px`};
+  max-width: 100%;
+
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap; /* no multi-line labels */
+  text-overflow: ellipsis;
+  overflow: hidden;
+
   font-weight: ${({ fontWeight }) => fontWeight ?? '600'};
   border: none;
   border-radius: ${({ rounded }) =>
     rounded ? tokens.borderRadius.ROUND : tokens.borderRadius.BASELINE}px;
   padding: ${({ size }) => sizePadding[size ?? 'medium']};
   box-sizing: border-box;
-  overflow: hidden;
   cursor: pointer;
   height: fit-content;
 
@@ -43,7 +52,6 @@ export const ButtonContainer = styled.button<{
         border: none;
       `
     }
-
     return `
       background-color: ${style.background};
       color: ${style.text};
