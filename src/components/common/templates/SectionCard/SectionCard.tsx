@@ -13,9 +13,7 @@ export default function SectionCard({ title, children }: Props) {
   return (
     <S.Wrapper>
       <PaddedContainer padding={tokens.padding.BASELINE * 2.5}>
-        <T.BodyMedium demi margin="0">
-          {title}
-        </T.BodyMedium>
+        <T.BodyMedium demi>{title}</T.BodyMedium>
       </PaddedContainer>
       <DividerBar />
       <S.Body>{children}</S.Body>

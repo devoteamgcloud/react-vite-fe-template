@@ -16,10 +16,8 @@ export default function BaseLayout({
   return (
     <S.Header role="banner">
       <div>
-        <T.Heading3 margin="0" bold>
-          {title}
-        </T.Heading3>
-        <T.BodySmall margin="0">{subtitle}</T.BodySmall>
+        <T.Heading3 bold>{title}</T.Heading3>
+        <T.BodySmall>{subtitle}</T.BodySmall>
       </div>
       {actions}
     </S.Header>
