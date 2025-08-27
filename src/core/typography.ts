@@ -121,7 +121,7 @@ const Heading3 = styled(TextBaseComponent)`
   }
 
   @media (max-width: ${tokens.breakpoints.phone}) {
-    font-size: ${tokens.text.fontSize.SMALL - 2}px;
+    font-size: ${tokens.text.fontSize.MEDIUM}px;
 `
 
 export const Typography = {
