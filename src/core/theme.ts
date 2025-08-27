@@ -1,9 +1,9 @@
 const neutrals = {
   black: '#0F0F0F',
   blackOpacity: '#00000010',
-  grayOpacity: '#D1D5DBD9',
+  grayOpacity: '#D1D5DBB3',
   white: '#FFFFFF',
-  whiteOpacity: '#FFFFFFD9',
+  whiteOpacity: '#FFFFFFE6',
 }
 
 const brandColors = {
@@ -13,7 +13,7 @@ const brandColors = {
 }
 
 const background = {
-  primaryGrey: '#EFEFE9',
+  primaryGrey: '#f4f4f4',
   secondaryGrey: '#F5F5F5',
   tertiaryGrey: '#CCCCCC',
 }
@@ -146,10 +146,6 @@ const light: ThemeConfig = {
         background: brandPalette.primaryButton,
         text: brandPalette.white,
         border: 'none',
-        hover: {
-          background: `${brandPalette.primaryButton}D9`,
-          text: brandPalette.white,
-        },
       },
       outlined: {
         background: 'transparent',
@@ -166,10 +162,6 @@ const light: ThemeConfig = {
         background: brandPalette.primaryBackground,
         text: brandPalette.text.primary,
         border: 'none',
-        hover: {
-          background: `${brandPalette.secondary}D9`,
-          text: brandPalette.white,
-        },
       },
       outlined: {
         background: 'transparent',
@@ -186,10 +178,6 @@ const light: ThemeConfig = {
         background: brandPalette.danger,
         text: brandPalette.white,
         border: 'none',
-        hover: {
-          background: `${brandPalette.danger}D9`,
-          text: brandPalette.white,
-        },
       },
     },
     success: {
@@ -197,10 +185,6 @@ const light: ThemeConfig = {
         background: brandPalette.success,
         text: brandPalette.white,
         border: 'none',
-        hover: {
-          background: `${brandPalette.success}D9`,
-          text: brandPalette.white,
-        },
       },
     },
     info: {
@@ -208,10 +192,6 @@ const light: ThemeConfig = {
         background: brandPalette.info,
         text: brandPalette.white,
         border: 'none',
-        hover: {
-          background: `${brandPalette.info}D9`,
-          text: brandPalette.white,
-        },
       },
     },
   },

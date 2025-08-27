@@ -6,13 +6,12 @@ const INDICATOR_H = '2px'
 
 export const Bar = styled.nav`
   display: flex;
-  align-items: flex-end; /* tabs sit on the divider */
   gap: ${tokens.gap.LARGE}px;
   margin: ${tokens.spacing.BASELINE * 2}px 0 ${tokens.spacing.BASELINE}px;
   border-bottom: ${DIVIDER_W} solid ${({ theme }) => theme.colors.scrollBar};
 `
 
-export const TabBtn = styled.button<{ active: boolean }>`
+export const TabButton = styled.button<{ active: boolean }>`
   position: relative;
   background: transparent;
   border: none;

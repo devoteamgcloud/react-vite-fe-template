@@ -5,8 +5,6 @@ export const PaddedContainer = styled.div<{ padding?: number }>`
   padding: ${(p) => p.padding ?? tokens.padding.BASELINE * 2}px;
 `
 
-export const Main = styled(PaddedContainer)``
-
 export const DividerBar = styled.hr`
   width: 100%;
   margin: 0;

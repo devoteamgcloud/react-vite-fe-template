@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import * as S from './styled'
 
 export type TabItem = {
@@ -10,7 +10,7 @@ export type TabItem = {
 type Props = { items: TabItem[]; defaultKey?: string }
 
 export default function Tabs({ items, defaultKey }: Props) {
-  const keys = useMemo(() => items.map((i) => i.key), [items])
+  const keys = items.map((i) => i.key)
   const [active, setActive] = useState(defaultKey ?? keys[0])
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function Tabs({ items, defaultKey }: Props) {
         {items.map((t) => {
           const isActive = t.key === active
           return (
-            <S.TabBtn
+            <S.TabButton
               key={t.key}
               role="tab"
               id={`${t.key}-tab`}
@@ -43,7 +43,7 @@ export default function Tabs({ items, defaultKey }: Props) {
               onClick={() => setActive(t.key)}
             >
               {t.label}
-            </S.TabBtn>
+            </S.TabButton>
           )
         })}
       </S.Bar>
