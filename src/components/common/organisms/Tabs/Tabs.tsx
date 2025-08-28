@@ -7,9 +7,13 @@ export type TabItem = {
   content: React.ReactNode
 }
 
-type Props = { items: TabItem[]; defaultKey?: string }
+type Props = {
+  items: TabItem[]
+  defaultKey?: string
+  offset: number
+}
 
-export default function Tabs({ items, defaultKey }: Props) {
+export default function Tabs({ items, defaultKey, offset }: Props) {
   const keys = items.map((i) => i.key)
   const [active, setActive] = useState(defaultKey ?? keys[0])
 
@@ -28,7 +32,12 @@ export default function Tabs({ items, defaultKey }: Props) {
 
   return (
     <>
-      <S.Bar role="tablist" aria-label="Sections" onKeyDown={onKeyDown}>
+      <S.Bar
+        role="tablist"
+        aria-label="Sections"
+        onKeyDown={onKeyDown}
+        offset={offset} // <-- now forwarded
+      >
         {items.map((t) => {
           const isActive = t.key === active
           return (

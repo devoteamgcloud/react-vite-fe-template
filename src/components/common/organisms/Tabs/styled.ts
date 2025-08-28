@@ -4,11 +4,16 @@ import tokens from '../../../../core/tokens'
 const DIVIDER_W = `${tokens.size.BASELINE / 8}px`
 const INDICATOR_H = '2px'
 
-export const Bar = styled.nav`
+export const Bar = styled.nav<{ offset: number }>`
   display: flex;
   gap: ${tokens.gap.LARGE}px;
   margin: ${tokens.spacing.BASELINE * 2}px 0 ${tokens.spacing.BASELINE}px;
   border-bottom: ${DIVIDER_W} solid ${({ theme }) => theme.colors.scrollBar};
+  background: ${({ theme }) => theme.colors.primaryBackground};
+
+  position: sticky;
+  top: ${({ offset }) => offset}px;
+  z-index: 10;
 `
 
 export const TabButton = styled.button<{ active: boolean }>`
