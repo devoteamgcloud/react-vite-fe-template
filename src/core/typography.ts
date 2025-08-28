@@ -39,7 +39,9 @@ const shouldForwardProp = (prop: string) =>
     'margin',
   ].includes(prop)
 
-const TextBaseComponent = styled('p', { shouldForwardProp })<TypographyProps>``
+const TextBaseComponent = styled('p', { shouldForwardProp })<TypographyProps>`
+  margin: 0;
+`
 
 export const textProps = (props: TypographyProps) => css`
   ${props.uppercase && 'text-transform: uppercase;'}

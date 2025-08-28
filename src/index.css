@@ -2,7 +2,7 @@
 
 :root {
   font-family: 'Montserrat', system-ui, Avenir, Helvetica, Arial, sans-serif;
-  color-scheme: light dark;
+  color-scheme: light, dark;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -26,4 +26,5 @@ select {
 
 body {
   margin: 0;
+  padding: 0;
 }
