@@ -12,7 +12,7 @@ export default tseslint.config([
   globalIgnores(['dist', 'node_modules', 'public']),
   {
     rules: {
-      "indent": ["error", 2, { "SwitchCase": 1 }],
+      "indent": ["error", 4, { "SwitchCase": 2 }],
       "no-tabs": ["error"],
       "no-trailing-spaces": ["error"],
       "prefer-const": "error",

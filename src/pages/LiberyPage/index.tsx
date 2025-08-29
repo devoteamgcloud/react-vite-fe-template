@@ -4,16 +4,16 @@ import { LIBRARY_TABS } from './tabs.config';
 import Header from '../../components/common/Layout/Header';
 
 export default function LibraryPage() {
-  return (
-    <>
-      <Header
-        title="React-Vite Template"
-        subtitle="Explore reusable components, hooks, and patterns"
-      />
+    return (
+        <>
+            <Header
+                title="React-Vite Template"
+                subtitle="Explore reusable components, hooks, and patterns"
+            />
 
-      <PaddedContainer>
-        <Tabs items={LIBRARY_TABS} defaultKey="overview" />
-      </PaddedContainer>
-    </>
-  );
+            <PaddedContainer>
+                <Tabs items={LIBRARY_TABS} defaultKey="overview" />
+            </PaddedContainer>
+        </>
+    );
 }

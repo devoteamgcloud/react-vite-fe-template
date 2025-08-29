@@ -9,17 +9,17 @@ type Props = {
 }
 
 export default function BaseLayout({
-  title = 'Title',
-  subtitle = '',
-  actions,
+    title = 'Title',
+    subtitle = '',
+    actions,
 }: Props) {
-  return (
-    <S.Header role="banner">
-      <div>
-        <T.Heading3 bold>{title}</T.Heading3>
-        <T.BodySmall>{subtitle}</T.BodySmall>
-      </div>
-      {actions}
-    </S.Header>
-  );
+    return (
+        <S.Header role="banner">
+            <div>
+                <T.Heading3 bold>{title}</T.Heading3>
+                <T.BodySmall>{subtitle}</T.BodySmall>
+            </div>
+            {actions}
+        </S.Header>
+    );
 }

@@ -3,9 +3,9 @@ import type { ButtonColor } from './Button';
 import tokens from '../../../../core/tokens';
 
 const sizePadding = {
-  small: `${tokens.padding.BASELINE * 1}px ${tokens.padding.BASELINE * 2}px`,
-  medium: `${tokens.padding.BASELINE * 2}px ${tokens.padding.BASELINE * 3}px`,
-  large: `${tokens.padding.BASELINE * 2.5}px ${tokens.padding.BASELINE * 4}px`,
+    small: `${tokens.padding.BASELINE * 1}px ${tokens.padding.BASELINE * 2}px`,
+    medium: `${tokens.padding.BASELINE * 2}px ${tokens.padding.BASELINE * 3}px`,
+    large: `${tokens.padding.BASELINE * 2.5}px ${tokens.padding.BASELINE * 4}px`,
 };
 
 const sizeMinWidth = { small: 90, medium: 120, large: 160 };
@@ -22,7 +22,7 @@ export const ButtonContainer = styled.button<{
   width: ${({ width }) => (width ? `${width}px` : 'auto')};
 
   ${({ fullWidth, size = 'medium' }) =>
-    fullWidth ? `flex: 1 0 ${sizeMinWidth[size]}px;` : `flex: 0 0 auto;`};
+        fullWidth ? `flex: 1 0 ${sizeMinWidth[size]}px;` : `flex: 0 0 auto;`};
 
   min-width: ${({ size = 'medium' }) => `${sizeMinWidth[size]}px`};
   max-width: 100%;
@@ -37,22 +37,22 @@ export const ButtonContainer = styled.button<{
   font-weight: ${({ fontWeight }) => fontWeight ?? '600'};
   border: none;
   border-radius: ${({ rounded }) =>
-    rounded ? tokens.borderRadius.ROUND : tokens.borderRadius.BASELINE}px;
+        rounded ? tokens.borderRadius.ROUND : tokens.borderRadius.BASELINE}px;
   padding: ${({ size }) => sizePadding[size ?? 'medium']};
   box-sizing: border-box;
   cursor: pointer;
   height: fit-content;
 
   ${({ variant, color, theme }) => {
-    const style = theme.buttonStyles[color]?.[variant];
-    if (!style) {
-      return `
+        const style = theme.buttonStyles[color]?.[variant];
+        if (!style) {
+            return `
         background: gray;
         color: white;
         border: none;
       `;
-    }
-    return `
+        }
+        return `
       background-color: ${style.background};
       color: ${style.text};
       box-shadow: ${style.border};
@@ -61,5 +61,5 @@ export const ButtonContainer = styled.button<{
         color: ${style.hover?.text ?? style.text};
       }
     `;
-  }}
+    }}
 `;

@@ -17,10 +17,10 @@ export const TabButton = styled.button<{ active: boolean }>`
   border: none;
   cursor: pointer;
   color: ${(p) =>
-    p.active ? p.theme.colors.primary : p.theme.colors.text.primary};
+        p.active ? p.theme.colors.primary : p.theme.colors.text.primary};
   font-size: ${tokens.text.fontSize.BASELINE}px;
   font-weight: ${({ active }) =>
-    active ? tokens.text.fontWeight.semiBold : tokens.text.fontWeight.normal};
+        active ? tokens.text.fontWeight.semiBold : tokens.text.fontWeight.normal};
 
   padding: ${tokens.spacing.BASELINE}px ${tokens.spacing.BASELINE * 2}px;
   padding-bottom: ${tokens.spacing.BASELINE * 1.5}px;

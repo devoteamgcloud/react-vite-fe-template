@@ -8,14 +8,14 @@ type ListProps = {
 }
 
 export default function List({ title, items }: ListProps) {
-  return (
-    <FlexContainer>
-      <T.BodyBase demi>{title}</T.BodyBase>
-      <S.List>
-        {items.map((item) => (
-          <S.ListItem key={item}>{item}</S.ListItem>
-        ))}
-      </S.List>
-    </FlexContainer>
-  );
+    return (
+        <FlexContainer>
+            <T.BodyBase demi>{title}</T.BodyBase>
+            <S.List>
+                {items.map((item) => (
+                    <S.ListItem key={item}>{item}</S.ListItem>
+                ))}
+            </S.List>
+        </FlexContainer>
+    );
 }

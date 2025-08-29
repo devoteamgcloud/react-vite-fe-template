@@ -3,12 +3,12 @@ import Tabs from '../../../components/common/organisms/Tabs';
 import { ExampleTabs } from './TabItems';
 
 const meta = {
-  title: "Organisms/Tabs",
-  component: Tabs,
-  tags: ["autodocs"],
-  parameters: {
-    layout: "centered",
-  },
+    title: "Organisms/Tabs",
+    component: Tabs,
+    tags: ["autodocs"],
+    parameters: {
+        layout: "centered",
+    },
 
 } satisfies Meta<typeof Tabs>;
 
@@ -18,14 +18,14 @@ type Story = StoryObj<typeof meta>
 
 
 export const Default: Story = {
-  args: {
-    items: ExampleTabs,
-  },
-  argTypes: {
-    defaultKey: {
-      control: {
-        disable: true
-      }
+    args: {
+        items: ExampleTabs,
+    },
+    argTypes: {
+        defaultKey: {
+            control: {
+                disable: true
+            }
+        }
     }
-  }
 };

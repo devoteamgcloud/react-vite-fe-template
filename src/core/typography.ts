@@ -21,23 +21,23 @@ export type TypographyProps = {
 }
 
 const shouldForwardProp = (prop: string) =>
-  ![
-    'accent',
-    'bold',
-    'centered',
-    'color',
-    'demi',
-    'error',
-    'light',
-    'lowercase',
-    'medium',
-    'onAccent',
-    'onSecondary',
-    'regular',
-    'underline',
-    'uppercase',
-    'margin',
-  ].includes(prop);
+    ![
+        'accent',
+        'bold',
+        'centered',
+        'color',
+        'demi',
+        'error',
+        'light',
+        'lowercase',
+        'medium',
+        'onAccent',
+        'onSecondary',
+        'regular',
+        'underline',
+        'uppercase',
+        'margin',
+    ].includes(prop);
 
 const TextBaseComponent = styled('p', { shouldForwardProp })<TypographyProps>`
   margin: 0;
@@ -127,12 +127,12 @@ const Heading3 = styled(TextBaseComponent)`
 `;
 
 export const Typography = {
-  BodyLarge,
-  BodyMedium,
-  BodySmall,
-  BodyBase,
-  BodyXSmall,
-  Heading1,
-  Heading2,
-  Heading3,
+    BodyLarge,
+    BodyMedium,
+    BodySmall,
+    BodyBase,
+    BodyXSmall,
+    Heading1,
+    Heading2,
+    Heading3,
 };

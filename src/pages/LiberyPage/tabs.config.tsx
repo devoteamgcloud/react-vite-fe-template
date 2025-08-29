@@ -4,7 +4,7 @@ import ComponentsTab from './tabs/Components';
 import HooksTab from './tabs/Hooks';
 
 export const LIBRARY_TABS: TabItem[] = [
-  { key: 'overview', label: 'Overview', content: <OverviewTab /> },
-  { key: 'components', label: 'Components', content: <ComponentsTab /> },
-  { key: 'hooks', label: 'Hooks', content: <HooksTab /> },
+    { key: 'overview', label: 'Overview', content: <OverviewTab /> },
+    { key: 'components', label: 'Components', content: <ComponentsTab /> },
+    { key: 'hooks', label: 'Hooks', content: <HooksTab /> },
 ];
