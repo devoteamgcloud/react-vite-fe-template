@@ -1,8 +1,8 @@
-import {addons} from 'storybook/manager-api'
-import theme from './devoteam'
+import {addons} from 'storybook/manager-api';
+import theme from './devoteam';
 
 addons.setConfig({
     theme: theme
-})
+});
 
-export default theme
+export default theme;

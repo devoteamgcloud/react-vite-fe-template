@@ -34,6 +34,6 @@ export const Default: Story = {
                 disable: true
             },
         }
-    
+
     }
 };
