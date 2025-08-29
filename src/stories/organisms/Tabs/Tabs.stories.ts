@@ -20,12 +20,20 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
     args: {
         items: ExampleTabs,
+        defaultKey: "Tab 3",
     },
     argTypes: {
         defaultKey: {
+            control: 'select',
+            options: ['Tab 1', 'Tab 2', 'Tab 3'],
+            value: "Tab 3",
+            description: "Set the default tab view"
+        },
+        items: {
             control: {
                 disable: true
-            }
+            },
         }
+    
     }
 };
