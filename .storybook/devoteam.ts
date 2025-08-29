@@ -7,6 +7,8 @@ export default create({
     brandUrl: "https://gcloud.devoteam.com/home/",
     brandImage: "/logo-devoteam.svg",
     brandTarget: "_blank",
+    fontBase: '"Open Sans", sans-serif',
+    fontCode: 'monospace',
 
     barSelectedColor: theme.colors.primary,
     barHoverColor: theme.colors.primary,

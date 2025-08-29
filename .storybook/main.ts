@@ -14,6 +14,9 @@ const config: StorybookConfig = {
     "framework": {
         "name": "@storybook/react-vite",
         "options": {}
-    }
+    },
+    managerHead: (head) =>
+        `${head}
+      <link rel="shortcut icon" href="/favicon.ico" type="image/ico">`,
 };
 export default config;
