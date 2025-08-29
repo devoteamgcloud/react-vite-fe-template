@@ -1,9 +1,9 @@
-import { Typography as T } from '../../../../core/typography'
+import { Typography as T } from '../../../../core/typography';
 
 export default function HooksTab() {
-  return (
-    <T.BodyBase>
+    return (
+        <T.BodyBase>
       Hooks content… useToggle, useLocalStorage, useCounter…
-    </T.BodyBase>
-  )
+        </T.BodyBase>
+    );
 }

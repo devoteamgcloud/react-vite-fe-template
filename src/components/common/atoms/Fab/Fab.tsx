@@ -9,7 +9,7 @@ type Props = {
 };
 
 const Fab: FC<Props> = ({ onClick, color = "primary" }) => {
-  return <S.Container onClick={onClick} color={color} />;
+    return <S.Container onClick={onClick} color={color} />;
 };
 
 export default Fab;

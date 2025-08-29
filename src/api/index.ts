@@ -1,4 +1,4 @@
-import axios from 'axios'
+import axios from 'axios';
 
 export const axiosClient = axios.create({
     baseURL: '',
@@ -6,4 +6,4 @@ export const axiosClient = axios.create({
         Accept: 'application/json',
         'Content-Type': 'application/json',
     },
-})
+});

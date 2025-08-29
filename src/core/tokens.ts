@@ -5,7 +5,7 @@ const breakpoints = {
     tablet: '911px',
     tabletLarge: '1025px',
     phone: '480px',
-}
+};
 
 const text = {
     lineHeight: 6,
@@ -25,13 +25,13 @@ const text = {
         semiBold: 600,
         bold: 700,
     },
-}
+};
 
 const padding = {
     ZERO: 0,
     BASELINE: 8,
     CONTAINER: 40,
-}
+};
 
 const borderRadius = {
     ZERO: 0,
@@ -40,29 +40,29 @@ const borderRadius = {
     MEDIUM: 24,
     LARGE: 32,
     ROUND: 50,
-}
+};
 
 const margin = {
     ZERO: 0,
     BASELINE: 8,
-}
+};
 
 const spacing = {
     ZERO: 0,
     BASELINE: 8,
-}
+};
 
 const gap = {
     BASELINE: 8,
     LARGE: 16,
-}
+};
 
 const size = {
     BASELINE: 8,
     SMALL: 16,
     MEDIUM: 24,
     LARGE: 32,
-}
+};
 
 const tokens = {
     breakpoints,
@@ -73,6 +73,6 @@ const tokens = {
     text,
     borderRadius,
     size,
-}
+};
 
-export default tokens
+export default tokens;

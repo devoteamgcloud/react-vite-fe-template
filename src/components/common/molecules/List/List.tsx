@@ -1,6 +1,6 @@
-import { Typography as T } from '../../../../core/typography'
-import { FlexContainer } from '../../styled'
-import * as S from './styled'
+import { Typography as T } from '../../../../core/typography';
+import { FlexContainer } from '../../styled';
+import * as S from './styled';
 
 type ListProps = {
   title: string
@@ -8,14 +8,14 @@ type ListProps = {
 }
 
 export default function List({ title, items }: ListProps) {
-  return (
-    <FlexContainer>
-      <T.BodyBase demi>{title}</T.BodyBase>
-      <S.List>
-        {items.map((item) => (
-          <S.ListItem key={item}>{item}</S.ListItem>
-        ))}
-      </S.List>
-    </FlexContainer>
-  )
+    return (
+        <FlexContainer>
+            <T.BodyBase demi>{title}</T.BodyBase>
+            <S.List>
+                {items.map((item) => (
+                    <S.ListItem key={item}>{item}</S.ListItem>
+                ))}
+            </S.List>
+        </FlexContainer>
+    );
 }

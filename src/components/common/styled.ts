@@ -1,9 +1,9 @@
-import styled from '@emotion/styled'
-import tokens from '../../core/tokens'
+import styled from '@emotion/styled';
+import tokens from '../../core/tokens';
 
 export const PaddedContainer = styled.div<{ padding?: number }>`
   padding: ${(p) => p.padding ?? tokens.padding.BASELINE * 2}px;
-`
+`;
 
 export const DividerBar = styled.hr`
   width: 100%;
@@ -11,7 +11,7 @@ export const DividerBar = styled.hr`
   border: 0;
   border-top: ${tokens.size.BASELINE / 8}px solid
     ${({ theme }) => theme.colors.scrollBar};
-`
+`;
 
 export const FlexContainer = styled.div<{
   direction?: 'row' | 'column'
@@ -25,4 +25,4 @@ export const FlexContainer = styled.div<{
   gap: ${(p) => p.gap ?? tokens.gap.BASELINE}px;
   align-items: ${(p) => p.align ?? 'stretch'};
   justify-content: ${(p) => p.justify ?? 'flex-start'};
-`
+`;

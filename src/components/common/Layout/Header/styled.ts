@@ -1,5 +1,5 @@
-import styled from '@emotion/styled'
-import tokens from '../../../../core/tokens'
+import styled from '@emotion/styled';
+import tokens from '../../../../core/tokens';
 
 export const Header = styled.header`
   position: sticky;
@@ -25,4 +25,4 @@ export const Header = styled.header`
       gap: ${tokens.size.BASELINE / 2}px;
     }
   }
-`
+`;
