@@ -1,0 +1,32 @@
+name: Test App
+on:
+    push:
+    pull_request:
+    workflow_dispatch:
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Using Node latest
+              uses: actions/setup-node@v4
+              with:
+                node-version: ">=18.0"
+            - name: Install packages
+              run: npm ci
+            - name: Run Tests
+              run: npm test
+
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+            - name: Using Node latest
+              uses: actions/setup-node@v4
+              with:
+                node-version: ">=18.0"
+            - name: Install packages
+              run: npm ci
+            - name: Build
+              run: npm run build
