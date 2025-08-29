@@ -1,4 +1,4 @@
-import Button from '../../../../components/common/atoms/Button/Button'
+import Button from '../../../../components/common/atoms/Button/Button';
 
 export const componentSections = [
   {
@@ -27,4 +27,4 @@ export const componentSections = [
       </>
     ),
   },
-]
+];

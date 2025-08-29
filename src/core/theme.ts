@@ -4,19 +4,19 @@ const neutrals = {
   grayOpacity: '#D1D5DBB3',
   white: '#FFFFFF',
   whiteOpacity: '#FFFFFFE6',
-}
+};
 
 const brandColors = {
   primary: '#f8485e',
   secondary: '#3c3c3a',
   tertiary: '#fca2ae',
-}
+};
 
 const background = {
   primaryGrey: '#f4f4f4',
   secondaryGrey: '#F5F5F5',
   tertiaryGrey: '#CCCCCC',
-}
+};
 
 const systemColors = {
   error: '#D32F2F',
@@ -24,7 +24,7 @@ const systemColors = {
   success: '#10B981',
   warning: '#FACC15',
   info: '#0EA5E9',
-}
+};
 
 const textColors = {
   primary: '#000000E5',
@@ -33,11 +33,11 @@ const textColors = {
   iconColor: '#3C4A63',
   black: neutrals.black,
   white: neutrals.white,
-}
+};
 
 const hover = {
   primaryGrey: '#EFEFE966',
-}
+};
 
 const brandPalette = {
   // Primary
@@ -79,7 +79,7 @@ const brandPalette = {
 
   // Buttons
   primaryButton: brandColors.primary,
-}
+};
 
 type ButtonVariantStyle = {
   background: string
@@ -195,11 +195,11 @@ const light: ThemeConfig = {
       },
     },
   },
-}
+};
 
 export const themes = {
   light,
-}
+};
 
 declare module '@emotion/react' {
   export interface Theme {
@@ -209,4 +209,4 @@ declare module '@emotion/react' {
   }
 }
 
-export default themes.light
+export default themes.light;

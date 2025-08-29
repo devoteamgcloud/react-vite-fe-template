@@ -1,7 +1,7 @@
-import { FlexContainer } from '../../../../components/common/styled'
-import SectionCard from '../../../../components/common/templates/SectionCard'
-import tokens from '../../../../core/tokens'
-import { componentSections } from './components.config'
+import { FlexContainer } from '../../../../components/common/styled';
+import SectionCard from '../../../../components/common/templates/SectionCard';
+import tokens from '../../../../core/tokens';
+import { componentSections } from './components.config';
 
 export default function ComponentsTab() {
   return (
@@ -18,5 +18,5 @@ export default function ComponentsTab() {
         </SectionCard>
       ))}
     </FlexContainer>
-  )
+  );
 }

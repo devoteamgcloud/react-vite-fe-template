@@ -9,8 +9,16 @@ import tseslint from 'typescript-eslint'
 import { globalIgnores } from 'eslint/config'
 
 export default tseslint.config([
-  globalIgnores(['dist']),
+  globalIgnores(['dist', 'node_modules', 'public']),
   {
+    rules: {
+      "indent": ["error", 2, { "SwitchCase": 1 }],
+      "no-tabs": ["error"],
+      "no-trailing-spaces": ["error"],
+      "prefer-const": "error",
+      "no-console": "warn",
+      semi: 'warn'
+    },
     files: ['**/*.{ts,tsx}'],
     extends: [
       js.configs.recommended,

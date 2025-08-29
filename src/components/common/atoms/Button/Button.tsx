@@ -1,5 +1,5 @@
-import { Typography } from '../../../../core/typography'
-import * as S from './styled'
+import { Typography } from '../../../../core/typography';
+import * as S from './styled';
 
 export type ButtonColor =
   | 'primary'
@@ -43,7 +43,7 @@ const Button: React.FC<Props> = ({
     >
       <Typography.BodyBase>{text}</Typography.BodyBase>
     </S.ButtonContainer>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

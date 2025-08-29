@@ -1,6 +1,6 @@
-import styled from '@emotion/styled'
-import { css } from '@emotion/react'
-import tokens from './tokens'
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
+import tokens from './tokens';
 
 export type TypographyProps = {
   accent?: boolean
@@ -37,11 +37,11 @@ const shouldForwardProp = (prop: string) =>
     'underline',
     'uppercase',
     'margin',
-  ].includes(prop)
+  ].includes(prop);
 
 const TextBaseComponent = styled('p', { shouldForwardProp })<TypographyProps>`
   margin: 0;
-`
+`;
 
 export const textProps = (props: TypographyProps) => css`
   ${props.uppercase && 'text-transform: uppercase;'}
@@ -52,37 +52,37 @@ export const textProps = (props: TypographyProps) => css`
     ${props.bold && 'font-weight: bold;'}
     ${props.demi && 'font-weight: 600;'}
     ${props.margin && `margin: ${props.margin};`}
-`
+`;
 
 const BodyLarge = styled(TextBaseComponent)`
   font-size: ${tokens.text.fontSize.LARGE}px;
   line-height: ${tokens.text.lineHeight * 3.5}px;
   ${textProps}
-`
+`;
 
 const BodyMedium = styled(TextBaseComponent)`
   font-size: ${tokens.text.fontSize.MEDIUM}px;
   line-height: 20px;
   ${textProps}
-`
+`;
 
 const BodyBase = styled(TextBaseComponent)`
   font-size: ${tokens.text.fontSize.BASELINE}px;
   line-height: ${tokens.text.lineHeight * 3}px;
   ${textProps}
-`
+`;
 
 const BodySmall = styled(TextBaseComponent)`
   font-size: ${tokens.text.fontSize.SMALL}px;
   line-height: ${tokens.text.lineHeight * 3}px;
   ${textProps}
-`
+`;
 
 const BodyXSmall = styled(TextBaseComponent)`
   font-size: ${tokens.text.fontSize.SMALL - 2}px;
   line-height: ${tokens.text.lineHeight * 3}px;
   ${textProps}
-`
+`;
 
 export const Heading1 = styled(TextBaseComponent)`
   font-size: ${tokens.text.fontSize.HEADING_LARGE}px;
@@ -99,7 +99,7 @@ export const Heading1 = styled(TextBaseComponent)`
   @media (max-width: ${tokens.breakpoints.phone}) {
     font-size: ${tokens.text.fontSize.MEDIUM}px;
   }
-`
+`;
 
 const Heading2 = styled(TextBaseComponent)`
   font-size: ${tokens.text.fontSize.HEADING_MEDIUM}px;
@@ -112,7 +112,7 @@ const Heading2 = styled(TextBaseComponent)`
   @media (max-width: ${tokens.breakpoints.phone}) {
     font-size: ${tokens.text.fontSize.SMALL}px;
   }
-`
+`;
 
 const Heading3 = styled(TextBaseComponent)`
   font-size: ${tokens.text.fontSize.HEADING_SMALL}px;
@@ -124,7 +124,7 @@ const Heading3 = styled(TextBaseComponent)`
 
   @media (max-width: ${tokens.breakpoints.phone}) {
     font-size: ${tokens.text.fontSize.MEDIUM}px;
-`
+`;
 
 export const Typography = {
   BodyLarge,
@@ -135,4 +135,4 @@ export const Typography = {
   Heading1,
   Heading2,
   Heading3,
-}
+};

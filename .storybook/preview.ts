@@ -1,6 +1,6 @@
-import type { Preview } from '@storybook/react-vite'
+import type { Preview } from '@storybook/react-vite';
 import { withThemeFromJSXProvider } from '@storybook/addon-themes';
-import theme from '../src/core/theme'
+import theme from '../src/core/theme';
 import { ThemeProvider } from '@emotion/react';
 
 const preview: Preview = {

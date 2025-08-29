@@ -1,7 +1,7 @@
 /// <reference types="vitest/config" />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import {createRequire} from 'node:module'
+import {createRequire} from 'node:module';
 const require = createRequire(import.meta.url);
 
 // https://vite.dev/config/

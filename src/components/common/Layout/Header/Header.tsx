@@ -1,6 +1,6 @@
-import type { ReactNode } from 'react'
-import * as S from './styled'
-import { Typography as T } from '../../../../core/typography'
+import type { ReactNode } from 'react';
+import * as S from './styled';
+import { Typography as T } from '../../../../core/typography';
 
 type Props = {
   title: string
@@ -21,5 +21,5 @@ export default function BaseLayout({
       </div>
       {actions}
     </S.Header>
-  )
+  );
 }

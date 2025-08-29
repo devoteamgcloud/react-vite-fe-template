@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react'
-import * as S from './styled'
+import { useEffect, useState } from 'react';
+import * as S from './styled';
 
 export type TabItem = {
   key: string
@@ -10,27 +10,27 @@ export type TabItem = {
 type Props = { items: TabItem[]; defaultKey?: string }
 
 export default function Tabs({ items, defaultKey }: Props) {
-  const keys = items.map((i) => i.key)
-  const [active, setActive] = useState(defaultKey ?? keys[0])
+  const keys = items.map((i) => i.key);
+  const [active, setActive] = useState(defaultKey ?? keys[0]);
 
   useEffect(() => {
-    if (!keys.includes(active)) setActive(keys[0])
-  }, [keys, active])
+    if (!keys.includes(active)) setActive(keys[0]);
+  }, [keys, active]);
 
   const onKeyDown = (e: React.KeyboardEvent) => {
-    const i = keys.indexOf(active)
-    if (e.key === 'ArrowRight') setActive(keys[(i + 1) % keys.length])
+    const i = keys.indexOf(active);
+    if (e.key === 'ArrowRight') setActive(keys[(i + 1) % keys.length]);
     if (e.key === 'ArrowLeft')
-      setActive(keys[(i - 1 + keys.length) % keys.length])
-    if (e.key === 'Home') setActive(keys[0])
-    if (e.key === 'End') setActive(keys[keys.length - 1])
-  }
+      setActive(keys[(i - 1 + keys.length) % keys.length]);
+    if (e.key === 'Home') setActive(keys[0]);
+    if (e.key === 'End') setActive(keys[keys.length - 1]);
+  };
 
   return (
     <>
       <S.Bar role="tablist" aria-label="Sections" onKeyDown={onKeyDown}>
         {items.map((t) => {
-          const isActive = t.key === active
+          const isActive = t.key === active;
           return (
             <S.TabButton
               key={t.key}
@@ -44,12 +44,12 @@ export default function Tabs({ items, defaultKey }: Props) {
             >
               {t.label}
             </S.TabButton>
-          )
+          );
         })}
       </S.Bar>
 
       {items.map((t) => {
-        const isActive = t.key === active
+        const isActive = t.key === active;
         return (
           <S.Panel
             key={t.key}
@@ -61,8 +61,8 @@ export default function Tabs({ items, defaultKey }: Props) {
           >
             {isActive && t.content}
           </S.Panel>
-        )
+        );
       })}
     </>
-  )
+  );
 }

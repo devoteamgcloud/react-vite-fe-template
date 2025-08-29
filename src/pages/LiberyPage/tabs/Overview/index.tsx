@@ -1,9 +1,9 @@
-import List from '../../../../components/common/molecules/List/List'
-import { FlexContainer } from '../../../../components/common/styled'
-import SectionCard from '../../../../components/common/templates/SectionCard'
-import tokens from '../../../../core/tokens'
-import { Typography as T } from '../../../../core/typography'
-import { overviewSections } from './overview.config'
+import List from '../../../../components/common/molecules/List/List';
+import { FlexContainer } from '../../../../components/common/styled';
+import SectionCard from '../../../../components/common/templates/SectionCard';
+import tokens from '../../../../core/tokens';
+import { Typography as T } from '../../../../core/typography';
+import { overviewSections } from './overview.config';
 
 export default function OverviewTab() {
   return (
@@ -17,5 +17,5 @@ export default function OverviewTab() {
         </SectionCard>
       ))}
     </FlexContainer>
-  )
+  );
 }

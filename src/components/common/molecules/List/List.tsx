@@ -1,6 +1,6 @@
-import { Typography as T } from '../../../../core/typography'
-import { FlexContainer } from '../../styled'
-import * as S from './styled'
+import { Typography as T } from '../../../../core/typography';
+import { FlexContainer } from '../../styled';
+import * as S from './styled';
 
 type ListProps = {
   title: string
@@ -17,5 +17,5 @@ export default function List({ title, items }: ListProps) {
         ))}
       </S.List>
     </FlexContainer>
-  )
+  );
 }

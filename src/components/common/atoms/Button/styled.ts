@@ -1,14 +1,14 @@
-import styled from '@emotion/styled'
-import type { ButtonColor } from './Button'
-import tokens from '../../../../core/tokens'
+import styled from '@emotion/styled';
+import type { ButtonColor } from './Button';
+import tokens from '../../../../core/tokens';
 
 const sizePadding = {
   small: `${tokens.padding.BASELINE * 1}px ${tokens.padding.BASELINE * 2}px`,
   medium: `${tokens.padding.BASELINE * 2}px ${tokens.padding.BASELINE * 3}px`,
   large: `${tokens.padding.BASELINE * 2.5}px ${tokens.padding.BASELINE * 4}px`,
-}
+};
 
-const sizeMinWidth = { small: 90, medium: 120, large: 160 }
+const sizeMinWidth = { small: 90, medium: 120, large: 160 };
 
 export const ButtonContainer = styled.button<{
   color: ButtonColor
@@ -44,13 +44,13 @@ export const ButtonContainer = styled.button<{
   height: fit-content;
 
   ${({ variant, color, theme }) => {
-    const style = theme.buttonStyles[color]?.[variant]
+    const style = theme.buttonStyles[color]?.[variant];
     if (!style) {
       return `
         background: gray;
         color: white;
         border: none;
-      `
+      `;
     }
     return `
       background-color: ${style.background};
@@ -60,6 +60,6 @@ export const ButtonContainer = styled.button<{
         background: ${style.hover?.background ?? style.background};
         color: ${style.hover?.text ?? style.text};
       }
-    `
+    `;
   }}
-`
+`;
